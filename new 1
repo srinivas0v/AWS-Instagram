@@ -1,0 +1,13 @@
+
+
+copy date from Cloud to onprem:
+
+
+AzCopy /Source:https://endurancestorage.blob.core.windows.net:443/endurancecontainer/HdiSamples/SensorSampleData/hvac/ /Dest:C:\blobdownload /SourceKey:QoX2AbTf1d5hudqs6IV38EslvVn9gkM10Se9r+nyh5Yl//xg6loHHrhfoxunlAmoGkrxylnkzfB6156z6VbC/g== /S
+
+
+
+AzCopy /Source:C:\blobdownload /Dest:https://endurancestorage.blob.core.windows.net:443/endurancecontainer/backup/ /DestKey:QoX2AbTf1d5hudqs6IV38EslvVn9gkM10Se9r+nyh5Yl//xg6loHHrhfoxunlAmoGkrxylnkzfB6156z6VbC/g== /S
+
+
+AzCopy /Source:https://endurancestorage.blob.core.windows.net:443/endurancecontainer/backup/ /Dest:https://endurance.blob.core.windows.net:443/stagingcontainer/ /SourceKey:QoX2AbTf1d5hudqs6IV38EslvVn9gkM10Se9r+nyh5Yl//xg6loHHrhfoxunlAmoGkrxylnkzfB6156z6VbC/g== /DestKey:GPbSPYStojLBS8PFwlNi/Rvg9LWVcqZyPvURXcP1bXRV0VHW8DAJCdTKEsQjyHn4IjfE6RAPF0qFW7QHG6cqNw== /Pattern:hvac /S
