@@ -5,18 +5,18 @@ import boto3
 import requests
 from botocore.client import Config
 
-accessKey = 'AKIAI5DPP36U25U2EV3Q'
-secretKey = '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'
-s3_bname = 'ubantusris3'
+accessKey = '#############'
+secretKey = '################'
+s3_bname = '###################'
 
 client = boto3.client('s3', 'us-east-2')
 transfer = S3Transfer(client)
 
-upath = 'C:/Users/srinivas venkatesh/Documents/cloud computing/assg3/files/'
+upath = '######################'
 # /home/ubuntu/flaskapp/files/
 # /home/ubuntu/flaskapp/downloads/
-dpath = 'C:/Users/srinivas venkatesh/Documents/cloud computing/assg3/download/'
-spath = 'C:/Users/srinivas venkatesh/Documents/cloud computing/assg3/static/'
+dpath = '###############'
+spath = '#####################'
 
 s3 = boto3.resource(
     's3',
